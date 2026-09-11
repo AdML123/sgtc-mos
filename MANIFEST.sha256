@@ -128,6 +128,7 @@ a5a67238c93af800cbb744ed9648cb74b4da87c645e5e3e3e338bdfe0fd06880 *./sgtc/compres
 46408c6014589fc5ab408da72f0c118b5fb739f07a74fcf385f0504dd0fa6eee *./sgtc/diagnosis/test_shuffle_test.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/diagnosis/__init__.py
 dc8c3087adbba5bce1100a593ad85c95c314b49b83fea2e0b76b8306831f5efd *./sgtc/diagnosis/__pycache__/shuffle_test.cpython-310-pytest-9.0.3.pyc
+5518046660ff131679382e19a05dd855494336ea9f4408a54c8979e3f10243b9 *./sgtc/diagnosis/__pycache__/shuffle_test.cpython-310.pyc
 7beb4ee3acc67c8ad8cb219d3b4250338d3352c97e3e96db5dc3c165e0e803c5 *./sgtc/diagnosis/__pycache__/test_shuffle_test.cpython-310-pytest-9.0.3.pyc
 0b4202d0fa7999387f6c232b39aeac302b10c9b923c0bd7285eb57714cf7a15f *./sgtc/diagnosis/__pycache__/__init__.cpython-310.pyc
 3985e182f0d8ef5d6f7241d71d7a6214c9854a071af0332d8dbdd2a2d917b15a *./sgtc/evaluation/metrics.py
@@ -149,6 +150,7 @@ fa529ca4ad1f40c3d3fc940ce624035ff37f3c7fd0145ad6cfdb57ded6516720 *./sgtc/evaluat
 5eb7e0dc35baa56708c1f20356760715cf5a2c469dd2269b8071021f0ca5e82b *./sgtc/fix_merge2_pair.py
 a566bfe1fdc2b8f916bcd1c7fa858387fbe420b0926c715d8051b75388eb0042 *./sgtc/lint_paper.py
 e5f5b49c04a467b66e5e6e79c6f68a85b5e3a869028dbe8d371869c8fed4f295 *./sgtc/run_attention_scores.py
+d05b1a309eec31ad4a720e0ce39c4da72bc4ff4187cdef823df834135e1a3b17 *./sgtc/run_demo.py
 ec5a00f2a7428c03e07aa6246bdef158b6b1987aad92a7b6776528b9ba97c650 *./sgtc/run_deploy.py
 f3c7a5de0295a84b51b8b6949b72fd7767373181ed4ea196e6522f66d4751685 *./sgtc/run_extract.py
 860b5a26b096a5e9095016b6a7657d88d80ace1ec136abb7f7cff1a2dd2853c4 *./sgtc/run_gpu_tail.py
@@ -163,4 +165,6 @@ f40a371c0c09bcc475e4891e895addecd081340645ede777256ae76dfca68f16 *./sgtc/visuali
 ace88cc734c5b9146b13599a21435ea627cff4c278a21d774770ce96a16d02e2 *./sgtc/visualization/rf4_layers.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/visualization/__init__.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/__init__.py
+a3836797ccefa3baf5d0d7342d611da3d63c4568f3e41ce6393ac2fc5b570086 *./sgtc/__pycache__/run_demo.cpython-310.pyc
+50961114508ad7fb0394098cc935f4bdff6bafe47af05a319a1b25908664aeb8 *./sgtc/__pycache__/train_regression_head.cpython-310.pyc
 161f514a044d4a399b234e4dd10797d662d02253ba6466cf7aa0be18810a8f06 *./sgtc/__pycache__/__init__.cpython-310.pyc
