@@ -33,7 +33,7 @@ Thumbs.db
 data/*
 !data/demo/
 models/
-features/
+/features/
 
 # local tooling state
 .mimosa/
