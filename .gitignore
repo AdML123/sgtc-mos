@@ -28,10 +28,10 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Restricted inputs (place under data/ locally; never commit)
-data/raw/
-data/local/
-data/
+# Restricted inputs (place under data/ locally; never commit).
+# data/demo is the bundled self-contained smoke-test subset and IS committed.
+data/*
+!data/demo/
 models/
 features/
 
