@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "NMSS: Neuron-Merged Self-Supervised Scoring (reproducibility package)"
+version: 0.1.0
+date-released: 2026-09-11
+url: https://github.com/author/sgtc-mos
+license: MIT
+authors:
+  - family-names: "Author"
+    given-names: "Anonymous"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+keywords:
+  - speech quality assessment
+  - model compression
+  - neuron merging
+  - self-supervised speech representations
+  - reproducibility

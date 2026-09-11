@@ -1,0 +1,39 @@
+# Manuscript and author material (project policy: never publish)
+*.pdf
+*.tex
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+figures-src/
+
+# Secrets and local configuration
+.env
+.env.*
+*.key
+*.pem
+*.token
+
+# Caches and build artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Restricted inputs (place under data/ locally; never commit)
+data/raw/
+data/local/
+data/
+models/
+features/
+
+# local tooling state
+.mimosa/
