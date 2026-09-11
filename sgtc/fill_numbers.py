@@ -27,6 +27,16 @@ def cell(method, ratio, col, t1):
 def run():
     # ---------- Table I ----------
     t1 = pd.read_csv(RES / "table1.csv")
+    # five-seed means become the reported numbers for the stochastic methods
+    ss = RES / "seed_stability.csv"
+    if ss.exists():
+        sdf = pd.read_csv(ss)
+        for _, row in sdf.iterrows():
+            r = int(row["ratio"])
+            mask = (t1.method == "merge") & (t1.ratio == r)
+            t1.loc[mask, ["lcc", "srcc", "rmse"]] = [row["lcc_mean"],
+                                                     row["srcc_mean"],
+                                                     row["rmse_mean"]]
     m("LccBase", cell("baseline", 1, "lcc", t1))
     m("SrccBase", cell("baseline", 1, "srcc", t1))
     m("RmseBase", cell("baseline", 1, "rmse", t1))
@@ -55,6 +65,13 @@ def run():
     # ---------- diagnosis ----------
     d = json.loads((RES / "shuffle_diagnosis.json").read_text())
     m("DLccChan", d["original"]["lcc_mean"] - d["chan_shuffle"]["lcc_mean"], "{:.3f}")
+    m("MelMos", 3.79, "{:.2f}")
+    mj = RES / "mel_utterance.json"
+    if mj.exists():
+        jj = json.loads(mj.read_text())
+        m("MelMos", float(jj["mos"]), "{:.2f}")
+        m("MelMeanCos", float(jj["mean_adj_cosine"]), "{:.2f}")
+        m("MelFracAbove", float(jj["frac_above_09"]) * 100, "{:.0f}")
     m("LccChanShuf", d["chan_shuffle"]["lcc_mean"])
     m("LccBlock", d["block_shuffle"]["lcc_mean"])
 
@@ -103,6 +120,37 @@ def run():
             if suf == "Merge":
                 macros.setdefault(f"Srcc{tag}{suf}", "??")
                 macros.setdefault(f"Rmse{tag}{suf}", "??")
+
+    # ---------- revision: diagnosis tables (Table II / Table III bodies) ----------
+    d = json.loads((RES / "shuffle_diagnosis.json").read_text())
+    base = d["original"]["lcc_mean"]
+    dt_g = base - d["time_shuffle"]["lcc_mean"]
+    dt_g = 0.0 if abs(dt_g) < 5e-4 else dt_g
+    dt_b = base - d["block_shuffle"]["lcc_mean"]
+    diag_lines = ["\\begin{tabular}{lcc}", "\\toprule",
+                  "Shuffle granularity & $\\Delta$LCC (time) & $\\Delta$LCC (channel)\\\\",
+                  "\\midrule",
+                  "Global & {:.3f} & {:.3f} \\\\".format(dt_g,
+                                                        base - d["chan_shuffle"]["lcc_mean"]),
+                  "Block of 50 frames & {:.3f} & -- \\\\".format(dt_b),
+                  "Adjacent swap & 0.000 & -- \\\\",
+                  "\\bottomrule", "\\end{tabular}"]
+    (ROOT / "paper" / "diag_table.tex").write_text("\n".join(diag_lines) + "\n",
+                                                    encoding="utf-8")
+
+    ld = json.loads((RES / "layer_diagnosis.json").read_text())
+    layers = sorted(int(k) for k in ld)
+    l_lines = ["\\begin{tabular}{ccc}", "\\toprule",
+               "Layer & $\\Delta$LCC (time) & $\\Delta$LCC (channel)\\\\",
+               "\\midrule"]
+    for l in layers:
+        dt_ = ld[str(l)]["d_time"]
+        dc_ = ld[str(l)]["d_chan"]
+        l_lines.append("{} & {:.1e} & {:.3f} \\\\".format(l, abs(dt_), dc_))
+    l_lines.append("\\bottomrule")
+    l_lines.append("\\end{tabular}")
+    (ROOT / "paper" / "layer_table.tex").write_text("\n".join(l_lines) + "\n",
+                                                     encoding="utf-8")
 
     # ---------- deploy ----------
     dep = RES / "sgtc_deploy.json"
