@@ -81,7 +81,15 @@ data/            NOT included — see Requirements for official sources
 models/          NOT included — fetch from the Hugging Face Hub
 ```
 
-## Known boundaries
+## Revision additions (v0.2.0)
+
+- `sgtc/run_seed_stability.py` — five-seed k-means stability (Table I plus-minus std, Fig. 3 band)
+- `sgtc/evaluation/run_revision_stats.py` — merge-vs-prune paired tests, bootstrap CI, NISQA calibration
+- `sgtc/evaluation/run_mlp_head.py` — MLP-head control, five seeds
+- `sgtc/evaluation/run_size_ablation.py` — training-size ablation (regularization evidence)
+- `sgtc/run_gpu_tail.py` and `sgtc/fix_merge2_pair.py` — wall-clock timing and cache-consistency tooling
+
+## Boundaries
 
 - The labeled corpus is the officially distributable portion of the challenge
   data, smaller than the full benchmark; absolute correlations are not

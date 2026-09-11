@@ -19,5 +19,10 @@
   "n_utts": {
     "accuracy": 741,
     "timing": 200
-  }
+  },
+  "merge2_timing_ms": {
+    "base": 19.805120500000157,
+    "merge2": 13.629670999982864
+  },
+  "merge2_speedup": 1.4530886695669367
 }

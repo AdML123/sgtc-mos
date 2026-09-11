@@ -1,0 +1,44 @@
+[
+  {
+    "method": "baseline",
+    "calibration": "none",
+    "lcc": 0.4340828183664152,
+    "srcc": 0.4105175617266279,
+    "rmse": 1.0721453950361006
+  },
+  {
+    "method": "baseline",
+    "calibration": "intercept",
+    "lcc": 0.4340828183664152,
+    "srcc": 0.4105175617266279,
+    "rmse": 1.0331365018754766
+  },
+  {
+    "method": "merge2",
+    "calibration": "none",
+    "lcc": 0.4340881287519822,
+    "srcc": 0.4181249241487823,
+    "rmse": 4.029602008906661
+  },
+  {
+    "method": "merge2",
+    "calibration": "intercept",
+    "lcc": 0.43408812875198227,
+    "srcc": 0.4181249241487823,
+    "rmse": 2.8198283401928323
+  },
+  {
+    "method": "prune2",
+    "calibration": "none",
+    "lcc": 0.4690418617477301,
+    "srcc": 0.46099282851873336,
+    "rmse": 0.8922921770155544
+  },
+  {
+    "method": "prune2",
+    "calibration": "intercept",
+    "lcc": 0.4690418617477302,
+    "srcc": 0.46099282851873336,
+    "rmse": 0.8787932228597842
+  }
+]
