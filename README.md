@@ -31,6 +31,24 @@ Headline result on the VoiceMOS Challenge 2022 distributable corpus
 All numbers in the paper are generated from `results/` by
 `python -m sgtc.fill_numbers` (single source of truth; no hand copying).
 
+## Quick start (self-contained smoke test)
+
+```bash
+git clone https://github.com/AdML123/sgtc-mos.git && cd sgtc-mos
+pip install -r environments/requirements.lock.txt   # or install torch per official guidance
+python -m pytest sgtc/ -q     # unit tests
+python -m sgtc.run_demo       # end-to-end smoke test on the bundled 10+10-utterance demo
+```
+
+`data/demo/` ships 20 wavs with MOS labels and cached encoder features under the
+original VCC licenses (see `data/demo/PROVENANCE.md`), so the demo runs without
+downloading any corpus or model. It verifies the pipeline mechanics against
+`results/demo_reference.json` (exact-match tolerance); its absolute numbers are
+noise-level by design. To reproduce the paper's numbers, fetch the full corpora
+below and follow the reproduction pipeline; every table in `results/tables/`
+and every per-utterance prediction in `results/preds/` can then be compared
+line by line with your own run.
+
 ## Requirements
 
 - Python 3.10, PyTorch >= 2.5 with a CUDA 12.8 capable GPU (tested on
