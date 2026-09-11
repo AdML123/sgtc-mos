@@ -3,7 +3,7 @@ e7c6bb30148cf667606dcd63e7ca77acaa3cfb0c8303bf09e6419e1e1669dc6d *./.pytest_cach
 37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4 *./.pytest_cache/CACHEDIR.TAG
 420e808d79a6c25d3cda0af33bc4782314a14949866682c68ce8149e89b66b70 *./.pytest_cache/README.md
 90582a0a6a90944ff3562aff46b2e3b7b315686a342f6719399c3a571c9c8730 *./.pytest_cache/v/cache/nodeids
-a0651dc5c2379f887dde2d089372a9f84022e594641636689c06aa91b12ffefd *./CITATION.cff
+97ca79a229fd149942d4cc20daeabd798e98944e1c113ad7f26d24c9ab3d91d7 *./CITATION.cff
 4ddc87e6e575cb83ee6b8f88ea3fc6cf5e43ec1970176539c35feaf60c10725a *./data/demo/features/test_sys02a43-utt824c4a5.npy
 671fe725656691987d4031857e7dabf11cbdae7fb835026646389d2ac993b05b *./data/demo/features/test_sys02a43-utt8d545f5.npy
 c8398f3e0831415135bf28df037f6395564a0d1ca361d0ae9e9b9a66e1d40f3b *./data/demo/features/test_sys02a43-utt93fc6eb.npy
@@ -54,6 +54,7 @@ b1bd151a35ade0a895c90579919983cd591f665267c408e89d91b0a964c8baa0 *./data/demo/wa
 9746abffb7a251b82bd499fd004580019b1c0169cff823f6140f5d6138afa651 *./environments/requirements.lock.txt
 b706212b8d358c88c2f57c0f7549b41730ee871fcfe66aec055fcdd5dd474238 *./LICENSE
 0f8d35236b2208076ea1819db19b395e46d86cdc80730ba1f1757d62a8f09d86 *./README.md
+f1347f030224234a40db3d3ca68a4ae4f5d40b922a3ab0c9a47fe3f70b5173f1 *./results/demo_reference.json
 38eaf068c886d3a1f9dc888da011782b3274c1804134f91259ea4f125ba7b4da *./results/preds/abl_cosine.npy
 bed35e25f19c5cf8f39dac77420cbb136ca37635cfe31095b0a5effd2aec5f2c *./results/preds/abl_full.npy
 7a52543e737cb6bfdf54c431ecc8a9031fda0ae32d8d09f672cca65b826fe12b *./results/preds/abl_global.npy
@@ -129,6 +130,7 @@ df0381e06aca956dda223384c60ca6839efc97cc8081350e01b6f9360a8ff156 *./sgtc/compres
 46408c6014589fc5ab408da72f0c118b5fb739f07a74fcf385f0504dd0fa6eee *./sgtc/diagnosis/test_shuffle_test.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/diagnosis/__init__.py
 ab83345b37133ec2a68761250c324f3a4fb3f04946cc1f406f3d79b5fe411a04 *./sgtc/diagnosis/__pycache__/shuffle_test.cpython-310-pytest-9.0.3.pyc
+9147764bfa120abd6937e19f87b1f709245e8933c6b3338527b3a69181d5d1f5 *./sgtc/diagnosis/__pycache__/shuffle_test.cpython-310.pyc
 461007e1a91bc905b8e3a70e06bd63d1f83a5f4b4f734e8a9ec2266b4bcbfeaa *./sgtc/diagnosis/__pycache__/test_shuffle_test.cpython-310-pytest-9.0.3.pyc
 b17ed605a34dfc7a9be84201fbf693a6120dcfd2c27a506ca6cb8e4869d4eda8 *./sgtc/diagnosis/__pycache__/__init__.cpython-310.pyc
 3985e182f0d8ef5d6f7241d71d7a6214c9854a071af0332d8dbdd2a2d917b15a *./sgtc/evaluation/metrics.py
@@ -151,6 +153,7 @@ b54fd2b678e6c3da5cc77d93dd4a55e4a38319fc737fdccc0b86f212a90843d6 *./sgtc/evaluat
 5eb7e0dc35baa56708c1f20356760715cf5a2c469dd2269b8071021f0ca5e82b *./sgtc/fix_merge2_pair.py
 a566bfe1fdc2b8f916bcd1c7fa858387fbe420b0926c715d8051b75388eb0042 *./sgtc/lint_paper.py
 e5f5b49c04a467b66e5e6e79c6f68a85b5e3a869028dbe8d371869c8fed4f295 *./sgtc/run_attention_scores.py
+d05b1a309eec31ad4a720e0ce39c4da72bc4ff4187cdef823df834135e1a3b17 *./sgtc/run_demo.py
 ec5a00f2a7428c03e07aa6246bdef158b6b1987aad92a7b6776528b9ba97c650 *./sgtc/run_deploy.py
 f3c7a5de0295a84b51b8b6949b72fd7767373181ed4ea196e6522f66d4751685 *./sgtc/run_extract.py
 860b5a26b096a5e9095016b6a7657d88d80ace1ec136abb7f7cff1a2dd2853c4 *./sgtc/run_gpu_tail.py
@@ -161,4 +164,6 @@ af078a0c016866fa6e76180f70b0d4cf196aa736d1edda44046bf49a64e66d75 *./sgtc/train_r
 91f93c0da83f6596d893168aa36fcc633be17c951dcf0cac642fc5bdce9c5991 *./sgtc/visualization/rf5_mel.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/visualization/__init__.py
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *./sgtc/__init__.py
+90e67335e95a7d6b6076a9f754a9d66063474cb8aa1f4403b0ec8bf092b08b19 *./sgtc/__pycache__/run_demo.cpython-310.pyc
+a228310373f2ffd390eb80eafae616e4af954066660d910830aa5aa98dbde511 *./sgtc/__pycache__/train_regression_head.cpython-310.pyc
 a8f051e9a960c6497ed8ea4642d7ebbac47f1d1b457367b6290bc9ffa0ab49d5 *./sgtc/__pycache__/__init__.cpython-310.pyc

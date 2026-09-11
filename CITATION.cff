@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "NMSS: Neuron-Merged Self-Supervised Scoring (reproducibility package)"
-version: 0.3.0
+version: 0.3.7
 date-released: 2026-09-11
 url: https://github.com/AdML123/sgtc-mos
 license: MIT
