@@ -152,6 +152,22 @@ def run():
     (ROOT / "paper" / "layer_table.tex").write_text("\n".join(l_lines) + "\n",
                                                      encoding="utf-8")
 
+    # ---------- revision: SSL-MOS three-branch head control ----------
+    sh = RES / "sslmos_head.csv"
+    if sh.exists():
+        for _, row in pd.read_csv(sh).iterrows():
+            tag = {"baseline": "Base", "merge2": "MergeTwo",
+                   "merge3": "MergeThree", "prune2": "PruneTwo",
+                   "baseline_ols": "BaseOls",
+                   "merge2_ols": "MergeTwoOls"}.get(row["method"])
+            if tag:
+                m(f"SslMosLcc{tag}", float(row["lcc_mean"]))
+                m(f"SslMosLcc{tag}Std", float(row["lcc_std"]), "{:.3f}")
+    for tag in ["Base", "MergeTwo", "MergeThree", "PruneTwo",
+                "BaseOls", "MergeTwoOls"]:
+        macros.setdefault(f"SslMosLcc{tag}", "??")
+        macros.setdefault(f"SslMosLcc{tag}Std", "??")
+
     # ---------- deploy ----------
     dep = RES / "sgtc_deploy.json"
     if dep.exists():

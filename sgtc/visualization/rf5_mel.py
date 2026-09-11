@@ -49,7 +49,7 @@ def main():
                          "font.size": 8, "axes.linewidth": 0.7,
                          "pdf.fonttype": 42, "axes.spines.top": False,
                          "axes.spines.right": False})
-    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(3.5, 1.6),
+    fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(3.5, 1.5),
                                    gridspec_kw={"height_ratios": [1.5, 1.0]})
     im = ax1.imshow(S_db, origin="lower", aspect="auto", cmap="magma",
                     extent=[0, dur, 0, 64])
