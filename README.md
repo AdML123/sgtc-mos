@@ -106,6 +106,8 @@ models/          NOT included — fetch from the Hugging Face Hub
 - `sgtc/evaluation/run_mlp_head.py` — MLP-head control, five seeds
 - `sgtc/evaluation/run_size_ablation.py` — training-size ablation (regularization evidence)
 - `sgtc/run_gpu_tail.py` and `sgtc/fix_merge2_pair.py` — wall-clock timing and cache-consistency tooling
+- `sgtc/run_seed_aggregate.py` — rebuilds five-seed stability table with full metrics
+- `sgtc/evaluation/run_sslmos_head.py` — SSL-MOS three-branch head control (proves the head is linear in pooled statistics; the merging gain requires the ridge-regularized linear head, `results/tables/sslmos_head.csv`)
 
 ## Boundaries
 
