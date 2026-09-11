@@ -33,7 +33,10 @@ def main():
                                        n_mels=64, fmax=8000)
     S_db = librosa.power_to_db(S, ref=np.max)
 
-    mpl.rcParams.update({"font.size": 8, "axes.linewidth": 0.7,
+    mpl.rcParams.update({"font.family": "sans-serif",
+                         "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
+                         "svg.fonttype": "none",
+                         "font.size": 8, "axes.linewidth": 0.7,
                          "pdf.fonttype": 42, "axes.spines.top": False,
                          "axes.spines.right": False})
     fig, ax = plt.subplots(figsize=(3.5, 1.5))
@@ -46,8 +49,12 @@ def main():
     cb.set_label("dB", fontsize=7)
     cb.ax.tick_params(labelsize=7)
     fig.tight_layout(pad=0.3)
-    out = Path(r"D:\paper51\paper\figs") / "fig2.pdf"
-    fig.savefig(out)
+    fig.savefig(str(Path(r"D:\paper51\paper\figs") / "fig2.svg"),
+                bbox_inches="tight")
+    fig.savefig(str(Path(r"D:\paper51\paper\figs") / "fig2.pdf"),
+                bbox_inches="tight")
+    fig.savefig(str(Path(r"D:\paper51\paper\figs") / "fig2.png"),
+                dpi=600, bbox_inches="tight")
     plt.close(fig)
 
     (config.RESULTS / "tables" / "mel_utterance.json").write_text(
